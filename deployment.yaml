@@ -15,8 +15,6 @@ spec:
       labels:
         app: danuri-image-backend
     spec:
-      imagePullSecrets:
-        - name: danuri-pull-secret
       containers:
         - name: danuri-image-backend
           image: ghcr.io/danuri-team/danuri-backend:latest
