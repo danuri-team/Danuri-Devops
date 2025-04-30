@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: danuri-image-backend
+  name: danuri-backend
   namespace: danuri
   labels:
-    app: danuri-image-backend
+    app: danuri-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: danuri-image-backend
+      app: danuri-backend
   template:
     metadata:
       labels:
-        app: danuri-image-backend
+        app: danuri-backend
     spec:
       containers:
-        - name: danuri-image-backend
+        - name: danuri-backend
           image: ghcr.io/danuri-team/danuri-backend:latest
           ports:
             - containerPort: 8080
