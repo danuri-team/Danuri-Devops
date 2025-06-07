@@ -35,4 +35,4 @@ spec:
             periodSeconds: 30
           envFrom:
             - secretRef:
-                name: danuri-image-backend
+                name: danuri-backend
