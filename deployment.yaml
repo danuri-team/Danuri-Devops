@@ -28,14 +28,14 @@ spec:
               cpu: 400m
               memory: 1024Mi
             requests:
-              cpu: 200m
+              cpu: 300m
               memory: 512Mi
           livenessProbe:
             httpGet:
               path: /health
               port: 8080
-            initialDelaySeconds: 30
-            periodSeconds: 20
+            initialDelaySeconds: 60
+            periodSeconds: 30
           envFrom:
             - secretRef:
-                name: danuri-image-backend
+                name: danuri-backend
