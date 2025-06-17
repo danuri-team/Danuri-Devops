@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: danuri-backend
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: danuri-backend
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1024Mi
+            limits:
+              cpu: 1000m
+              memory: 2048Mi
