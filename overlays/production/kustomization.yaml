@@ -4,13 +4,13 @@ kind: Kustomization
 namespace: danuri-prod
 
 resources:
-  - ../../base
+- ../../base
 
 images:
-  - name: ghcr.io/danuri-team/danuri-backend
-    newTag: v0.0.1
+- name: ghcr.io/danuri-team/danuri-backend
+  newTag: dd311af0
 
 patches:
-  - path: patch-deployment.yaml
-    target:
-      kind: Deployment
+- path: patch-deployment.yaml
+  target:
+    kind: Deployment
