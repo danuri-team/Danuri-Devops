@@ -10,5 +10,5 @@ images:
   - name: ghcr.io/danuri-team/danuri-backend
     newTag: v0.0.1
 
-patchesStrategicMerge:
+patches:
   - patch-deployment.yaml
