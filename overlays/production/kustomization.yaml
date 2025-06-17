@@ -11,4 +11,6 @@ images:
     newTag: v0.0.1
 
 patches:
-  - patch-deployment.yaml
+  - path: patch-deployment.yaml
+    target:
+      kind: Deployment
