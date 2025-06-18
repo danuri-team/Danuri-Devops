@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: danuri-backend-ingress
+  namespace: danuri
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: HTTP
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: stg.danuri-api.mya.ong
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: danuri-backend
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - stg.danuri-api.mya.ong
+      secretName: danuri-api-tls
