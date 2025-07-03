@@ -10,8 +10,8 @@ spec:
         - name: danuri-backend
           resources:
             requests:
-              cpu: 500m
+              cpu: 200m
               memory: 1024Mi
             limits:
-              cpu: 1000m
+              cpu: 300m
               memory: 2048Mi
