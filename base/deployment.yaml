@@ -30,12 +30,22 @@ spec:
             requests:
               cpu: 300m
               memory: 512Mi
-          livenessProbe:
+          startupProbe:
             httpGet:
               path: /health
               port: 8080
-            initialDelaySeconds: 60
+            initialDelaySeconds: 130
             periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 4
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 0
+            periodSeconds: 5
+            timeoutSeconds: 2
+            failureThreshold: 3
           envFrom:
             - secretRef:
                 name: danuri-backend
