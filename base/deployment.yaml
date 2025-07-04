@@ -24,11 +24,8 @@ spec:
             - name: monitoring
               containerPort: 8081
           resources:
-            limits:
-              cpu: 400m
-              memory: 1024Mi
             requests:
-              cpu: 300m
+              cpu: 100m
               memory: 512Mi
           startupProbe:
             httpGet:
