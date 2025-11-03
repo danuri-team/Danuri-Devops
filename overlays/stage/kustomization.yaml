@@ -8,7 +8,7 @@ resources:
 
 images:
 - name: ghcr.io/danuri-team/danuri-backend
-  newTag: cd36c05b
+  newTag: 45f16e48
 
 patches:
 - path: patch-deployment.yaml
