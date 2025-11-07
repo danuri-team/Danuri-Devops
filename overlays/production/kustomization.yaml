@@ -8,7 +8,7 @@ resources:
 
 images:
 - name: ghcr.io/danuri-team/danuri-backend
-  newTag: f1242644
+  newTag: adb29ceb
 
 patches:
 - path: patch-deployment.yaml
