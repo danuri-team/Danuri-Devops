@@ -5,6 +5,7 @@ namespace: danuri-stage
 
 resources:
 - ../../base
+- doppler-secret.yaml
 
 images:
 - name: ghcr.io/danuri-team/potato-4-cut
