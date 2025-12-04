@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: potato-4-cut
+  namespace: danuri
+spec:
+  selector:
+    app: potato-4-cut
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+    - name: monitoring
+      port: 8081
+      targetPort: 8081
+  type: ClusterIP

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: potato-4-cut
+  namespace: danuri
+  labels:
+    app: potato-4-cut
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: potato-4-cut
+  template:
+    metadata:
+      labels:
+        app: potato-4-cut
+    spec:
+      containers:
+        - name: potato-4-cut
+          image: ghcr.io/danuri-team/potato4cut-v2-backend:latest
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: monitoring
+              containerPort: 8081
+          resources:
+            requests:
+              cpu: 100m
+              memory: 512Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            timeoutSeconds: 2
+            failureThreshold: 3
+          envFrom:
+            - secretRef:
+                name: potato-4-cut
