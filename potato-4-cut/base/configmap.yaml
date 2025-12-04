@@ -2,4 +2,3 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: potato-4-cut-config
-  namespace: danuri

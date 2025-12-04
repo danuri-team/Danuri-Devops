@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: potato-4-cut
-  namespace: danuri
   labels:
     app: potato-4-cut
 spec:
