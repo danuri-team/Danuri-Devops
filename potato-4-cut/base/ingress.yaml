@@ -23,4 +23,4 @@ spec:
   tls:
     - hosts:
         - potato-4cut-api.mya.ong
-      secretName: potato-4cut-api-tls
+      secretName: danuri-api-tls
