@@ -16,3 +16,6 @@ spec:
             requests:
               cpu: 100m
               memory: 1024Mi
+          envFrom:
+            - secretRef:
+                name: potato-4-cut-stage
