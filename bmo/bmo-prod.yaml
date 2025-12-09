@@ -7,7 +7,7 @@ spec:
   tokenSecret:
     name: bmo-secret
     namespace: doppler-operator-system
-  project: danuri-backend
+  project: bmo
   config: prd
   managedSecret:
     name: bmo-secret
