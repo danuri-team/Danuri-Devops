@@ -4,10 +4,12 @@ kind: Kustomization
 namespace: danuri-prod
 
 resources:
-  - deployment.yaml
-  - service.yaml
-  - bmo-prod.yaml
+- deployment.yaml
+- service.yaml
+- bmo-prod.yaml
 
 images:
-  - name: ghcr.io/danuri-team/bmo
-    newTag: latest
+- name: danuri-team/bmo
+  newTag: b1e8535e
+- name: ghcr.io/danuri-team/bmo
+  newTag: latest
