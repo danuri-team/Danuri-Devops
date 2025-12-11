@@ -9,4 +9,4 @@ resources:
 
 images:
 - name: ghcr.io/danuri-team/bmo
-  newTag: 00c509b
+  newTag: 3689f76
