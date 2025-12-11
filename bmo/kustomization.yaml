@@ -8,7 +8,5 @@ resources:
 - bmo-prod.yaml
 
 images:
-- name: danuri-team/bmo
-  newTag: 1fdeeadd
-- name: ghcr.io/danuri-team/bmo
-  newTag: latest
+  - name: ghcr.io/danuri-team/bmo
+    newTag: latest
