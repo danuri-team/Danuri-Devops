@@ -9,7 +9,7 @@ resources:
 
 images:
 - name: ghcr.io/danuri-team/potato4cut-v2-backend
-  newTag: 3b192a09
+  newTag: 257a75e8
 
 patches:
 - path: patch-deployment.yaml
