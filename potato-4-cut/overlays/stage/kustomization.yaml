@@ -4,17 +4,17 @@ kind: Kustomization
 namespace: danuri-stage
 
 resources:
-- ../../base
-- doppler-secret.yaml
+  - ../../base
+  - doppler-secret.yaml
 
 images:
-- name: ghcr.io/danuri-team/potato4cut-v2-backend
-  newTag: 7fb870b6
+  - name: ghcr.io/danuri-team/potato4cut-v2-backend
+    newTag: 7fb870b6
 
 patches:
-- path: patch-deployment.yaml
-  target:
-    kind: Deployment
-- path: patch-ingress.yaml
-  target:
-    kind: Ingress
+  - path: patch-deployment.yaml
+    target:
+      kind: Deployment
+  - path: potato-4cut-stage-route.yaml
+    target:
+      kind: Ingress
