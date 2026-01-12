@@ -8,7 +8,7 @@ spec:
     - name: istio-gateway
       namespace: istio-system
   hostnames:
-    - "stg.potato-4cut-api.mya.ong"
+    - "stg-potato-4cut-api.mya.ong"
   rules:
     - matches:
         - path:
