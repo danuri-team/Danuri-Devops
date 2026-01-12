@@ -17,4 +17,4 @@ patches:
       kind: Deployment
   - path: potato-4cut-stage-route.yaml
     target:
-      kind: Ingress
+      kind: HTTPRoute
